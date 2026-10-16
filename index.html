@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#101827">
+<title>A股趋势判断与加减仓助手</title>
+<style>
+:root{--bg:#f3f6fb;--card:#fff;--ink:#172033;--muted:#65718a;--line:#dfe6f0;--blue:#2563eb;--green:#087f5b;--red:#c2413b;--amber:#a16207;--navy:#101827}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif}
+header{background:var(--navy);color:white;padding:18px max(16px,calc((100vw - 1200px)/2));}
+h1{font-size:clamp(22px,4vw,32px);margin:0 0 5px}header p{margin:0;color:#cbd5e1;font-size:13px}
+main{max-width:1200px;margin:auto;padding:16px;display:grid;gap:14px}
+nav{display:flex;gap:8px;overflow:auto;padding:2px 0}nav button{white-space:nowrap;border:1px solid var(--line);background:white;border-radius:10px;padding:9px 13px;color:var(--ink);cursor:pointer}nav button.active{background:var(--blue);color:white;border-color:var(--blue)}
+.grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}.two{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px;min-width:0;box-shadow:0 2px 8px #0f172a08}
+h2{font-size:17px;margin:0 0 12px}h3{font-size:14px;margin:0 0 7px;color:var(--muted)}
+.big{font-size:25px;font-weight:750;letter-spacing:-.5px}.muted{color:var(--muted);font-size:13px}.status{display:inline-block;padding:4px 9px;border-radius:999px;font-size:13px;font-weight:700}.good{color:var(--green);background:#dff7ed}.bad{color:var(--red);background:#fee8e7}.mid{color:var(--amber);background:#fff3cd}
+label{display:block;font-size:13px;color:var(--muted);margin:8px 0 4px}input,select{width:100%;border:1px solid #cbd5e1;border-radius:9px;padding:10px;background:white;color:var(--ink);font:inherit}button.primary{background:var(--blue);color:white;border:0;border-radius:9px;padding:10px 14px;font:inherit;font-weight:650;cursor:pointer}button.secondary{background:white;border:1px solid var(--line);border-radius:9px;padding:9px 12px;font:inherit;cursor:pointer}
+.actions{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-top:12px}.callout{background:#eff6ff;border:1px solid #bfdbfe;padding:12px;border-radius:10px;font-size:13px}.warning{background:#fff7ed;border:1px solid #fed7aa;padding:12px;border-radius:10px;font-size:13px}
+table{width:100%;border-collapse:collapse;font-size:13px}th,td{text-align:left;padding:9px 7px;border-bottom:1px solid var(--line)}th{color:var(--muted);font-weight:600}
+canvas{width:100%;height:260px;display:block}.chartwrap{min-height:260px}
+small{color:var(--muted)}.hidden{display:none!important}.check{display:flex;gap:8px;align-items:flex-start}.check input{width:auto;margin-top:5px}
+footer{max-width:1200px;margin:auto;padding:0 16px 28px;color:var(--muted);font-size:12px}
+@media(max-width:800px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}.two{grid-template-columns:1fr}main{padding:10px}.card{padding:13px}.big{font-size:22px}canvas{height:220px}}
+@media(max-width:380px){.grid{grid-template-columns:1fr 1fr}.big{font-size:19px}}
+</style>
+</head>
+<body>
+<header><h1>A股趋势判断与加减仓助手</h1><p>历史回测 · 趋势与风险 · 基金仓位参考 | 手动更新版，不接入实时行情</p></header>
+<main>
+<nav>
+<button class="active" data-tab="home">总览</button><button data-tab="data">导入真实数据</button><button data-tab="backtest">历史回测</button><button data-tab="signals">加减仓依据</button>
+</nav>
+<section id="home">
+<div class="callout"><b>数据更新方式：</b>本系统不接入实时行情。每次分析以已导入数据中最新一个交易日的收盘价为基准；若行情文件没有更新，系统会明确显示数据截止日期，不会假装使用最新行情。行情需要手动导入更新，无法更新时可导出反馈文件供后续维护。</div>
+<div class="grid" style="margin-top:12px">
+<div class="card"><h3>数据状态</h3><div class="big" id="dataState">未导入</div><div class="muted" id="dataCount">请导入日线CSV</div><div class="muted" id="freshness" style="margin-top:6px">尚未检查更新情况</div></div>
+<div class="card"><h3>最新收盘日期</h3><div class="big" id="lastDate">—</div><div class="muted">由导入数据决定</div></div>
+<div class="card"><h3>趋势信号</h3><div class="big" id="trendScore">—</div><div class="muted">需足够历史数据</div></div>
+<div class="card"><h3>当前参考</h3><div class="big" id="positionSignal">暂无</div><div class="muted">不构成个性化投资承诺</div></div>
+</div>
+<div class="two" style="margin-top:14px">
+<div class="card"><h2>指数收盘价与均线</h2><div class="chartwrap"><canvas id="priceChart"></canvas></div><div class="muted">展示导入标的最近约250个交易日；价格与均线按原始单位展示。</div></div>
+<div class="card"><h2>策略净值与买入持有对比</h2><div class="chartwrap"><canvas id="equityChart"></canvas></div><div class="muted">只有运行回测后才绘制。图表不代表未来收益。</div></div>
+</div>
+<div class="card"><h2>数据覆盖情况</h2><div id="coverage" class="muted">尚未导入数据。</div></div>
+</section>
+
+<section id="data" class="hidden">
+<div class="card"><h2>导入真实历史日线 CSV</h2>
+<p class="muted">建议从可靠行情源导出 2015年至今的日线数据。一个CSV对应一个指数或板块指数；建议先导入沪深300，再导入中证全指、科创50、半导体、CPO、AI、电网设备、黄金相关指数。文件仅在本机浏览器内存中处理，不会上传。</p>
+<label>选择CSV文件（可多选）</label><input id="csvFiles" type="file" accept=".csv,text/csv" multiple>
+<div class="two">
+<div><label>默认交易成本（单边，基点）</label><input id="costBps" type="number" min="0" max="100" value="15"><small>15基点=0.15%；买卖均计费。可按基金/ETF实际费用调整。</small></div>
+<div><label>策略使用标的</label><select id="assetSelect"><option value="">导入后选择</option></select><small>建议先用宽基指数验证趋势逻辑。</small></div>
+</div>
+<div class="actions"><button class="primary" id="loadBtn">读取并校验文件</button><button class="secondary" id="clearBtn">清空本次数据</button><button class="secondary" id="feedbackBtn">导出更新问题反馈</button></div>
+<div id="importMsg" class="muted" style="margin-top:12px">等待导入。</div>
+<div class="warning" style="margin-top:12px"><b>手动更新流程：</b>定期从行情来源重新导出包含最新交易日的CSV，再导入本页。文件应保留足够长的历史数据；导入新文件后，检查“最新收盘日期”和数据覆盖范围。若最新交易日缺失、日期异常或导入报错，点击“导出更新问题反馈”保存诊断文本。该按钮只在本机生成反馈文件，不会自动发送给维护人员。<br><br><b>CSV字段要求：</b>日期、收盘价为必需字段；成交额可选。支持常见中文字段（日期/交易日期、收盘/收盘价）或英文 date/close。日期建议 YYYY-MM-DD。若导入的是ETF/指数历史价格，回测是价格指数回测，不等同于基金真实复权收益。</div>
+</div>
+<div class="card"><h2>已加载数据集</h2><div id="datasets">暂无数据。</div></div>
+</section>
+
+<section id="backtest" class="hidden">
+<div class="card"><h2>策略回测设置</h2>
+<div class="two">
+<div><label>策略</label><select id="strategy"><option value="ma">趋势均线策略（收盘价高于均线持有）</option><option value="multi">多指标确认策略（均线+动量+成交额）</option><option value="defensive">防守策略（长均线过滤）</option></select></div>
+<div><label>均线周期</label><select id="maPeriod"><option value="20">20日</option><option value="60" selected>60日</option><option value="120">120日</option></select></div>
+<div><label>初始资金（元）</label><input id="capital" type="number" min="1000" value="100000"></div>
+<div><label>允许最高仓位</label><select id="maxExposure"><option value="0.5">50%</option><option value="0.7" selected>70%</option><option value="1">100%</option></select></div>
+</div>
+<div class="check"><input id="useCost" type="checkbox" checked><label for="useCost">计入买入/卖出交易成本，并按下一交易日执行信号，避免使用未来数据</label></div>
+<div class="actions"><button class="primary" id="runBtn">运行回测</button><span id="btStatus" class="muted">需要先导入数据并选择标的。</span></div>
+</div>
+<div class="grid">
+<div class="card"><h3>策略累计收益</h3><div class="big" id="stratReturn">—</div></div>
+<div class="card"><h3>买入持有收益</h3><div class="big" id="bhReturn">—</div></div>
+<div class="card"><h3>策略最大回撤</h3><div class="big" id="maxDD">—</div></div>
+<div class="card"><h3>已平仓交易胜率</h3><div class="big" id="winRate">—</div></div>
+</div>
+<div class="card"><h2>回测结果明细</h2><div id="btDetails" class="muted">尚未运行回测。</div></div>
+<div class="warning">注意：该版本是透明、简化的研究回测，不含分红再投资、停牌/涨跌停、申赎限制、跟踪误差、完整税费与基金净值特殊机制。指数回测不能直接等同于你持有的基金表现。策略参数需留出样本外区间验证。</div>
+</section>
+
+<section id="signals" class="hidden">
+<div class="card"><h2>加减仓参考（由实际导入数据计算）</h2><div id="signalDetail" class="muted">导入数据并运行回测后显示信号依据。</div></div>
+<div class="card"><h2>平衡型风险规则</h2>
+<table><thead><tr><th>条件</th><th>系统参考动作</th><th>风险解释</th></tr></thead><tbody>
+<tr><td>收盘价高于中期均线，均线向上，动量为正</td><td><span class="status good">可考虑分批</span></td><td>不代表短期必涨；需看市场宽度与量能是否确认。</td></tr>
+<tr><td>趋势指标互相矛盾，或数据不足</td><td><span class="status mid">等待确认</span></td><td>保留现金，不因单日下跌自动补仓。</td></tr>
+<tr><td>收盘价跌破长均线且动量转负</td><td><span class="status bad">优先控风险</span></td><td>评估组合集中度和可承受回撤，避免越跌越补。</td></tr>
+<tr><td>板块涨幅强但波动显著放大</td><td><span class="status mid">避免追高</span></td><td>科技主题可能高度相关，分散持有多个同类基金未必能分散风险。</td></tr>
+</tbody></table>
+<p class="muted">以上是策略规则说明，不是对当前行情的判断。只有真实数据完整且指标实际计算完成后，页面才会显示当前信号。建议信号仅供研究参考，不替代投资判断。</p>
+</div>
+</section>
+</main>
+<footer>本地研究工具 · 不构成投资建议 · CSV数据仅存于当前页面内存，刷新后需重新导入。请核验数据源、复权口径和交易成本。</footer>
+<script>
+const datasets = new Map(); let lastBacktest = null;
+const $ = id => document.getElementById(id);
+function parseCSV(text){
+  text=text.replace(/^\\uFEFF/,''); const first=(text.split(/\\r?\\n/)[0]||'');
+  const delim=(first.match(/;/g)||[]).length>(first.match(/,/g)||[]).length?';':',';
+  const rows=[]; let row=[],cell='',q=false;
+  for(let i=0;i<text.length;i++){const c=text[i];if(c==='"'){if(q&&text[i+1]==='"'){cell+='"';i++;}else q=!q;}else if(c===delim&&!q){row.push(cell.trim());cell='';}else if((c==='\\n'||c==='\\r')&&!q){if(c==='\\r'&&text[i+1]==='\\n')i++;row.push(cell.trim());if(row.some(x=>x!==''))rows.push(row);row=[];cell='';}else cell+=c;}
+  row.push(cell.trim());if(row.some(x=>x!==''))rows.push(row);
+  if(rows.length<2)throw Error('文件没有足够的数据行');
+  const norm=s=>String(s||'').trim().toLowerCase().replace(/[\\s_（）()\\-]/g,'');
+  const headers=rows[0].map(norm);
+  const find=names=>headers.findIndex(h=>names.includes(h));
+  const di=find(['日期','交易日期','date','tradedate','时间']);
+  const ci=find(['收盘','收盘价','close','closeprice','最新价']);
+  const vi=find(['成交额','成交金额','amount','turnover','成交额(元)','成交额(万元)']);
+  if(di<0||ci<0)throw Error('未识别到日期和收盘价字段。请检查CSV表头。');
+  const data=[];
+  for(let r=1;r<rows.length;r++){const d=rows[r][di], c=Number(String(rows[r][ci]).replace(/,/g,''));if(!d||!Number.isFinite(c)||c<=0)continue;
+    const dt=new Date(d.length===8&&/^\\d{8}$/.test(d)?`${d.slice(0,4)}-${d.slice(4,6)}-${d.slice(6,8)}`:d);
+    if(Number.isNaN(dt.getTime()))continue;
+    let amount=null;if(vi>=0){const a=Number(String(rows[r][vi]).replace(/,/g,''));if(Number.isFinite(a))amount=a;}
+    data.push({date:dt.toISOString().slice(0,10),close:c,amount});}
+  const unique=new Map(data.map(x=>[x.date,x]));const out=[...unique.values()].sort((a,b)=>a.date.localeCompare(b.date));
+  if(out.length<130)throw Error(`有效数据仅${out.length}行，至少建议130个交易日；做长期回测建议覆盖2015年至今。`);
+  return out;
+}
+function moving(arr,n){return arr.map((_,i)=>i+1<n?null:arr.slice(i-n+1,i+1).reduce((a,b)=>a+b,0)/n)}
+function pct(a,b){return b?((a/b)-1)*100:0}
+function fmtPct(v){return Number.isFinite(v)?v.toFixed(2)+'%':'—'}
+function esc(s){return String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]))}
+function updateSelect(){const sel=$('assetSelect');const prev=sel.value;sel.innerHTML='<option value="">请选择数据集</option>'+[...datasets.keys()].map(k=>`<option value="${esc(k)}">${esc(k)}</option>`).join('');if(datasets.has(prev))sel.value=prev;else if(datasets.size)sel.value=datasets.keys().next().value;renderDatasets();renderOverview();}
+function renderDatasets(){if(!datasets.size){$('datasets').textContent='暂无数据。';return;}$('datasets').innerHTML='<table><thead><tr><th>数据集</th><th>起始日期</th><th>结束日期</th><th>有效行数</th><th>字段</th></tr></thead><tbody>'+[...datasets].map(([k,a])=>`<tr><td>${esc(k)}</td><td>${a[0].date}</td><td>${a[a.length-1].date}</td><td>${a.length.toLocaleString()}</td><td>日期、收盘价${a.some(x=>x.amount!==null)?'、成交额':''}</td></tr>`).join('')+'</tbody></table>'}
+function draw(canvas,series,labels=[]){const ctx=canvas.getContext('2d'),w=canvas.clientWidth||500,h=canvas.clientHeight||250,dpr=window.devicePixelRatio||1;canvas.width=w*dpr;canvas.height=h*dpr;ctx.scale(dpr,dpr);ctx.clearRect(0,0,w,h);ctx.font='12px sans-serif';ctx.fillStyle='#65718a';ctx.strokeStyle='#e5eaf2';for(let i=0;i<5;i++){const y=12+(h-35)*i/4;ctx.beginPath();ctx.moveTo(38,y);ctx.lineTo(w-8,y);ctx.stroke();}
+ const all=series.flatMap(s=>s.values.filter(Number.isFinite));if(!all.length){ctx.fillText('导入数据后显示真实曲线',45,h/2);return;}let min=Math.min(...all),max=Math.max(...all);if(min===max){min*=.98;max*=1.02;}const x=i=>38+(w-48)*i/Math.max(1,Math.max(...series.map(s=>s.values.length))-1),y=v=>12+(h-35)*(max-v)/(max-min);
+ series.forEach(s=>{ctx.strokeStyle=s.color;ctx.lineWidth=2;ctx.beginPath();let started=false;s.values.forEach((v,i)=>{if(!Number.isFinite(v))return;if(!started){ctx.moveTo(x(i),y(v));started=true}else ctx.lineTo(x(i),y(v));});ctx.stroke();});
+ ctx.fillStyle='#65718a';ctx.fillText(max.toFixed(2),2,16);ctx.fillText(min.toFixed(2),2,h-20);if(labels.length){ctx.fillText(labels[0],38,h-5);ctx.fillText(labels[labels.length-1],w-75,h-5);}
+}
+function renderOverview(){const name=$('assetSelect').value, data=datasets.get(name);if(!data){$('dataState').textContent='未导入';$('dataCount').textContent='请导入日线CSV';$('freshness').textContent='尚未检查更新情况';$('lastDate').textContent='—';$('trendScore').textContent='—';$('positionSignal').textContent='暂无';$('coverage').textContent='尚未导入数据。';draw($('priceChart'),[]);draw($('equityChart'),[]);return;}
+ const c=data.map(x=>x.close),ma20=moving(c,20),ma60=moving(c,60),i=c.length-1;const score=(c[i]>ma20[i]?1:0)+(c[i]>ma60[i]?1:0)+(ma20[i]>ma20[Math.max(0,i-5)]?1:0)+(c[i]>c[Math.max(0,i-20)]?1:0);
+ $('dataState').textContent='已加载';$('dataCount').textContent=`${data.length.toLocaleString()}个交易日 · ${name}`;const ageDays=Math.floor((Date.now()-new Date(data[i].date+'T16:00:00').getTime())/86400000);$('freshness').textContent=ageDays>7?`注意：最新数据距今约${ageDays}天，请核对是否需要更新。`:`分析基准：${data[i].date}收盘；请核对行情源是否已更新。`;$('lastDate').textContent=data[i].date;$('trendScore').textContent=`${score}/4`;
+ $('positionSignal').textContent=score>=3?'偏强观察':score<=1?'偏弱防守':'震荡等待';
+ $('coverage').textContent=`标的：${name}；覆盖：${data[0].date} 至 ${data[i].date}；有效交易日：${data.length}；成交额字段：${data.some(x=>x.amount!==null)?'已提供':'未提供'}。趋势得分只由价格与均线计算，不包含未导入的市场宽度或资金流。`;
+ draw($('priceChart'),[{values:c.slice(-250),color:'#2563eb'},{values:ma20.slice(-250),color:'#16a34a'},{values:ma60.slice(-250),color:'#d97706'}],[data[Math.max(0,data.length-250)].date,data[i].date]);
+ if(lastBacktest&&lastBacktest.name===name)draw($('equityChart'),[{values:lastBacktest.strategyEquity,color:'#2563eb'},{values:lastBacktest.bhEquity,color:'#16a34a'}],[data[0].date,data[i].date]);else draw($('equityChart'),[]);
+ $('signalDetail').innerHTML=`<p><b>标的：</b>${esc(name)}　<b>数据截止：</b>${data[i].date}</p><p><b>收盘价：</b>${c[i].toFixed(3)}；<b>20日均线：</b>${ma20[i]?.toFixed(3)||'数据不足'}；<b>60日均线：</b>${ma60[i]?.toFixed(3)||'数据不足'}</p><p><b>趋势得分：</b>${score}/4（价格高于20日均线、60日均线、20日均线上行、20日动量为正各计1分）。</p><p><b>初步状态：</b>${score>=3?'偏强观察':score<=1?'偏弱防守':'震荡等待'}。<b>风险条件：</b>当前版本只计算单一标的价格趋势，未导入全市场宽度、板块相对强度和资金数据，因此不能据此直接下达真实加减仓指令。</p>`;
+}
+function backtest(){const name=$('assetSelect').value,data=datasets.get(name);if(!data){$('btStatus').textContent='请先导入数据并选择标的。';return;}const close=data.map(x=>x.close),period=Number($('maPeriod').value),ma=moving(close,period),strategy=$('strategy').value,cap=Number($('capital').value)||100000,maxExp=Number($('maxExposure').value),cost=$('useCost').checked?Math.max(0,Number($('costBps').value)||0)/10000:0;
+ let pos=0,eq=cap,peak=cap,maxdd=0,tradeEntry=null,wins=0,closed=0,turns=0;const se=[],bh=[];let bhVal=cap;
+ // signal formed at close t, executed at t+1; return from t to t+1 uses position decided at t-1
+ for(let i=0;i<data.length;i++){
+   let target=0;
+   if(i>0&&ma[i-1]!==null){const trend=close[i-1]>ma[i-1],mom=i>=21?close[i-1]/close[i-21]-1:0,amountOk=data[i-1].amount!==null&&i>=6?data[i-1].amount>data.slice(i-6,i-1).reduce((s,x)=>s+(x.amount||0),0)/5:false;
+     if(strategy==='ma')target=trend?maxExp:0;
+     if(strategy==='defensive'){const long=moving(close,Math.max(120,period));target=long[i-1]!==null&&close[i-1]>long[i-1]?maxExp:0;}
+     if(strategy==='multi')target=trend&&mom>0&&(!data[i-1].amount||amountOk)?maxExp:0;
+   }
+   if(i>0){const r=close[i]/close[i-1]-1;eq*=1+pos*r;bhVal*=1+r;}
+   if(Math.abs(target-pos)>1e-9){const turnover=Math.abs(target-pos);eq*=1-cost*turnover;turns++;if(pos>0&&target===0&&tradeEntry!==null){closed++;if(eq>tradeEntry)wins++;tradeEntry=null;}if(pos===0&&target>0)tradeEntry=eq;pos=target;}
+   peak=Math.max(peak,eq);maxdd=Math.min(maxdd,eq/peak-1);se.push(eq);bh.push(bhVal);
+ }
+ const ret=pct(eq,cap),bhret=pct(bhVal,cap),win=closed?wins/closed*100:null;
+ lastBacktest={name,strategyEquity:se,bhEquity:bh};
+ $('stratReturn').textContent=fmtPct(ret);$('bhReturn').textContent=fmtPct(bhret);$('maxDD').textContent=fmtPct(maxdd*100);$('winRate').textContent=win===null?'暂无平仓样本':fmtPct(win);
+ $('btStatus').textContent=`已完成：${name}，${data[0].date} 至 ${data[data.length-1].date}`;
+ $('btDetails').innerHTML=`<table><tbody><tr><th>回测标的</th><td>${esc(name)}</td><th>策略</th><td>${strategy==='ma'?'趋势均线':strategy==='multi'?'多指标确认':'防守均线'}</td></tr><tr><th>起止日期</th><td>${data[0].date} 至 ${data[data.length-1].date}</td><th>交易日数</th><td>${data.length}</td></tr><tr><th>期末策略资产</th><td>${eq.toFixed(2)} 元</td><th>期末持有资产</th><td>${bhVal.toFixed(2)} 元</td></tr><tr><th>交易信号切换次数</th><td>${turns}</td><th>已平仓交易次数</th><td>${closed}</td></tr><tr><th>成本设置</th><td>${cost? (cost*10000).toFixed(1)+'基点/单边':'未计成本'}</td><th>最高目标仓位</th><td>${(maxExp*100).toFixed(0)}%</td></tr></tbody></table><p class="muted">胜率统计采用简化的“空仓到持仓再回空仓”周期，不能与券商逐笔成交胜率直接等同。收益率不含分红再投资；策略采用收盘后产生信号、下一交易日持仓生效的简化模型。请不要把单一历史区间结果当作未来收益承诺。</p>`;
+ draw($('equityChart'),[{values:se,color:'#2563eb'},{values:bh,color:'#16a34a'}],[data[0].date,data[data.length-1].date]);renderOverview();
+}
+document.querySelectorAll('nav button').forEach(b=>b.addEventListener('click',()=>{document.querySelectorAll('nav button').forEach(x=>x.classList.remove('active'));b.classList.add('active');['home','data','backtest','signals'].forEach(t=>$(t).classList.toggle('hidden',t!==b.dataset.tab));}));
+$('loadBtn').addEventListener('click',async()=>{const files=[...$('csvFiles').files];if(!files.length){$('importMsg').textContent='请先选择CSV文件。';return;}let ok=0,msg=[];for(const f of files){try{const data=parseCSV(await f.text());let name=f.name.replace(/\\.csv$/i,'').replace(/[_-]/g,' ');if(datasets.has(name))name+=` (${ok+1})`;datasets.set(name,data);ok++;msg.push(`✓ ${f.name}：${data.length}行，${data[0].date}至${data[data.length-1].date}`);}catch(e){msg.push(`✗ ${f.name}：${e.message}`);}}$('importMsg').innerHTML=msg.map(esc).join('<br>');updateSelect();});
+$('feedbackBtn').addEventListener('click',()=>{const name=$('assetSelect').value;const data=datasets.get(name);const msg=['A股趋势判断与加减仓助手｜数据更新问题反馈','反馈生成时间：'+new Date().toLocaleString(),'当前选中数据集：'+(name||'未选择'),'最新数据日期：'+(data&&data.length?data[data.length-1].date:'无'),'数据行数：'+(data?data.length:'无'),'导入信息：'+$('importMsg').innerText,'建议排查：1. CSV是否包含最新交易日；2. 日期/收盘价字段名是否可识别；3. 文件是否完整覆盖所需历史区间；4. 收盘价是否为数值且日期无重复。','说明：本反馈文件不会自动发送，请在后续维护沟通中手动附上。'].join('\n');const blob=new Blob([msg],{type:'text/plain;charset=utf-8'});const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='A股趋势系统_更新问题反馈.txt';a.click();URL.revokeObjectURL(a.href);});
+$('clearBtn').addEventListener('click',()=>{datasets.clear();lastBacktest=null;$('csvFiles').value='';$('btDetails').textContent='尚未运行回测。';updateSelect();$('importMsg').textContent='本次数据已清空。';});
+$('assetSelect').addEventListener('change',()=>{lastBacktest=null;renderOverview();});
+$('runBtn').addEventListener('click',backtest);
+window.addEventListener('resize',()=>renderOverview());renderOverview();
+</script>
+</body></html>
