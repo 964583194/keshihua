@@ -1,8 +1,8 @@
 {
   "meta": {
-    "generated_at": null,
+    "generated_at": "2026-10-18 19:50:33 CST",
     "data_date": null,
-    "overall_status": "等待 GitHub Actions 首次成功获取真实数据"
+    "overall_status": "本次更新失败，已尽量保留上次有效数据"
   },
   "overview": {
     "hs300": null,
@@ -14,7 +14,78 @@
   "indices": [],
   "industry_flows": [],
   "concept_flows": [],
-  "focus_sectors": [],
+  "focus_sectors": [
+    {
+      "name": "半导体",
+      "change_pct": null,
+      "change_5d": null,
+      "change_20d": null,
+      "status": "暂无可用匹配数据"
+    },
+    {
+      "name": "CPO",
+      "change_pct": null,
+      "change_5d": null,
+      "change_20d": null,
+      "status": "暂无可用匹配数据"
+    },
+    {
+      "name": "光模块",
+      "change_pct": null,
+      "change_5d": null,
+      "change_20d": null,
+      "status": "暂无可用匹配数据"
+    },
+    {
+      "name": "AI应用",
+      "change_pct": null,
+      "change_5d": null,
+      "change_20d": null,
+      "status": "暂无可用匹配数据"
+    },
+    {
+      "name": "电网设备",
+      "change_pct": null,
+      "change_5d": null,
+      "change_20d": null,
+      "status": "暂无可用匹配数据"
+    },
+    {
+      "name": "黄金",
+      "change_pct": null,
+      "change_5d": null,
+      "change_20d": null,
+      "status": "暂无可用匹配数据"
+    },
+    {
+      "name": "有色金属",
+      "change_pct": null,
+      "change_5d": null,
+      "change_20d": null,
+      "status": "暂无可用匹配数据"
+    },
+    {
+      "name": "稀土",
+      "change_pct": null,
+      "change_5d": null,
+      "change_20d": null,
+      "status": "暂无可用匹配数据"
+    },
+    {
+      "name": "储能",
+      "change_pct": null,
+      "change_5d": null,
+      "change_20d": null,
+      "status": "暂无可用匹配数据"
+    },
+    {
+      "name": "电池",
+      "change_pct": null,
+      "change_5d": null,
+      "change_20d": null,
+      "status": "暂无可用匹配数据"
+    }
+  ],
   "breadth": {
     "advancers": null,
     "decliners": null,
@@ -27,5 +98,60 @@
     "equity_bond_spread": null,
     "cn10y_yield": null
   },
-  "sources": []
+  "sources": [
+    {
+      "module": "沪深300",
+      "status": "失败",
+      "date": null,
+      "note": "ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))"
+    },
+    {
+      "module": "创业板指",
+      "status": "失败",
+      "date": null,
+      "note": "ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))"
+    },
+    {
+      "module": "科创50",
+      "status": "失败",
+      "date": null,
+      "note": "ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))"
+    },
+    {
+      "module": "上证指数",
+      "status": "失败",
+      "date": null,
+      "note": "ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))"
+    },
+    {
+      "module": "深证成指",
+      "status": "失败",
+      "date": null,
+      "note": "ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))"
+    },
+    {
+      "module": "行业板块资金",
+      "status": "失败",
+      "date": null,
+      "note": "JSONDecodeError: Expecting value: line 1 column 1 (char 0)"
+    },
+    {
+      "module": "概念板块资金",
+      "status": "失败",
+      "date": null,
+      "note": "JSONDecodeError: Expecting value: line 1 column 1 (char 0)"
+    },
+    {
+      "module": "市场宽度",
+      "status": "待接入",
+      "date": null,
+      "note": "需要验证全市场涨跌家数的稳定来源"
+    },
+    {
+      "module": "估值与股债利差",
+      "status": "待接入",
+      "date": null,
+      "note": "历史分位/利差需稳定历史序列与口径核验后再接入"
+    }
+  ]
 }
