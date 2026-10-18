@@ -1,0 +1,41 @@
+name: Update A-share dashboard data
+
+on:
+  workflow_dispatch:
+  schedule:
+    # UTC 01:00-07:40 = Beijing 09:00-15:40, weekdays.
+    - cron: "0,20,40 1-7 * * 1-5"
+    - cron: "35 7 * * 1-5"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: update-a-share-dashboard-data
+  cancel-in-progress: false
+
+jobs:
+  update-data:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install data dependencies
+        run: pip install --disable-pip-version-check akshare pandas
+      - name: Fetch and preserve latest valid market data
+        run: python scripts/update_data.py
+      - name: Commit data snapshot if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/dashboard.json
+          if ! git diff --cached --quiet; then
+            git commit -m "Update A-share dashboard data"
+            git push
+          else
+            echo "No data changes to commit"
+          fi

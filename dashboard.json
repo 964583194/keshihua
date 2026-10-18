@@ -1,0 +1,31 @@
+{
+  "meta": {
+    "generated_at": null,
+    "data_date": null,
+    "overall_status": "等待 GitHub Actions 首次成功获取真实数据"
+  },
+  "overview": {
+    "hs300": null,
+    "chinext": null,
+    "star50": null,
+    "advancers": null,
+    "decliners": null
+  },
+  "indices": [],
+  "industry_flows": [],
+  "concept_flows": [],
+  "focus_sectors": [],
+  "breadth": {
+    "advancers": null,
+    "decliners": null,
+    "unchanged": null,
+    "advance_decline_ratio": null
+  },
+  "valuation": {
+    "hs300_pe": null,
+    "hs300_pe_percentile": null,
+    "equity_bond_spread": null,
+    "cn10y_yield": null
+  },
+  "sources": []
+}
