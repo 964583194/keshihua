@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated_at": "2026-10-20 13:37:54 CST",
+    "generated_at": "2026-10-20 18:24:30 CST",
     "data_date": "2026-10-20",
     "overall_status": "行情可用；部分指标待接入"
   },
@@ -382,27 +382,27 @@
     },
     {
       "module": "创业板指",
-      "status": "成功",
-      "date": "2026-10-20",
-      "note": "AkShare公开指数日线；收益率由收盘价计算"
+      "status": "失败",
+      "date": null,
+      "note": "ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))"
     },
     {
       "module": "科创50",
-      "status": "成功",
-      "date": "2026-10-20",
-      "note": "AkShare公开指数日线；收益率由收盘价计算"
+      "status": "失败",
+      "date": null,
+      "note": "ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))"
     },
     {
       "module": "上证指数",
-      "status": "成功",
-      "date": "2026-10-20",
-      "note": "AkShare公开指数日线；收益率由收盘价计算"
+      "status": "失败",
+      "date": null,
+      "note": "ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))"
     },
     {
       "module": "深证成指",
-      "status": "成功",
-      "date": "2026-10-20",
-      "note": "AkShare公开指数日线；收益率由收盘价计算"
+      "status": "失败",
+      "date": null,
+      "note": "ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))"
     },
     {
       "module": "行业板块资金",
@@ -427,6 +427,12 @@
       "status": "待接入",
       "date": null,
       "note": "历史分位/利差需稳定历史序列与口径核验后再接入"
+    },
+    {
+      "module": "历史数据保护",
+      "status": "已保留",
+      "date": "2026-10-20",
+      "note": "本次指数接口全部失败，沿用上次文件中的指数数据"
     },
     {
       "module": "industry_flows",
