@@ -1,55 +1,47 @@
 {
   "meta": {
-    "generated_at": "2026-10-20 10:27:27 CST",
+    "generated_at": "2026-10-20 13:37:54 CST",
     "data_date": "2026-10-20",
     "overall_status": "行情可用；部分指标待接入"
   },
   "overview": {
-    "hs300": 4158.9,
-    "chinext": 2759.59,
-    "star50": 1340.16,
+    "hs300": null,
+    "chinext": 2717.48,
+    "star50": 1323.34,
     "advancers": null,
     "decliners": null
   },
   "indices": [
     {
-      "name": "沪深300",
-      "latest": 4158.9,
-      "change_pct": -0.37,
-      "change_5d": -2.73,
-      "change_20d": -7.17,
-      "date": "2026-10-20"
-    },
-    {
       "name": "创业板指",
-      "latest": 2759.59,
-      "change_pct": 0.48,
-      "change_5d": -6.72,
-      "change_20d": -16.01,
+      "latest": 2717.48,
+      "change_pct": -1.05,
+      "change_5d": -8.14,
+      "change_20d": -17.29,
       "date": "2026-10-20"
     },
     {
       "name": "科创50",
-      "latest": 1340.16,
-      "change_pct": 0.83,
-      "change_5d": -6.1,
-      "change_20d": -12.31,
+      "latest": 1323.34,
+      "change_pct": -0.44,
+      "change_5d": -7.28,
+      "change_20d": -13.41,
       "date": "2026-10-20"
     },
     {
       "name": "上证指数",
-      "latest": 3729.73,
-      "change_pct": -0.03,
-      "change_5d": -1.87,
-      "change_20d": -4.0,
+      "latest": 3708.02,
+      "change_pct": -0.61,
+      "change_5d": -2.44,
+      "change_20d": -4.56,
       "date": "2026-10-20"
     },
     {
       "name": "深证成指",
-      "latest": 11851.1,
-      "change_pct": 0.29,
-      "change_5d": -4.07,
-      "change_20d": -11.46,
+      "latest": 11719.65,
+      "change_pct": -0.83,
+      "change_5d": -5.13,
+      "change_20d": -12.44,
       "date": "2026-10-20"
     }
   ],
@@ -384,9 +376,9 @@
   "sources": [
     {
       "module": "沪深300",
-      "status": "成功",
-      "date": "2026-10-20",
-      "note": "AkShare公开指数日线；收益率由收盘价计算"
+      "status": "失败",
+      "date": null,
+      "note": "ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))"
     },
     {
       "module": "创业板指",
@@ -414,15 +406,15 @@
     },
     {
       "module": "行业板块资金",
-      "status": "成功",
-      "date": "2026-10-20",
-      "note": "东方财富公开资金流向排名；资金流为供应商估算值"
+      "status": "失败",
+      "date": null,
+      "note": "JSONDecodeError: Expecting value: line 1 column 1 (char 0)"
     },
     {
       "module": "概念板块资金",
-      "status": "成功",
-      "date": "2026-10-20",
-      "note": "东方财富公开资金流向排名；资金流为供应商估算值"
+      "status": "失败",
+      "date": null,
+      "note": "JSONDecodeError: Expecting value: line 1 column 1 (char 0)"
     },
     {
       "module": "市场宽度",
@@ -435,6 +427,18 @@
       "status": "待接入",
       "date": null,
       "note": "历史分位/利差需稳定历史序列与口径核验后再接入"
+    },
+    {
+      "module": "industry_flows",
+      "status": "已保留",
+      "date": "2026-10-20",
+      "note": "本次接口失败或返回空数据，沿用上次文件中的数据"
+    },
+    {
+      "module": "concept_flows",
+      "status": "已保留",
+      "date": "2026-10-20",
+      "note": "本次接口失败或返回空数据，沿用上次文件中的数据"
     }
   ]
 }
