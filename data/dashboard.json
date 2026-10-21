@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated_at": "2026-10-21 13:39:45 CST",
+    "generated_at": "2026-10-21 18:35:29 CST",
     "data_date": "2026-10-21",
     "overall_status": "行情可用；部分指标待接入"
   },
@@ -384,45 +384,45 @@
   "sources": [
     {
       "module": "沪深300",
-      "status": "成功",
-      "date": "2026-10-21",
-      "note": "AkShare公开指数日线；收益率由收盘价计算"
+      "status": "失败",
+      "date": null,
+      "note": "ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))"
     },
     {
       "module": "创业板指",
-      "status": "成功",
-      "date": "2026-10-21",
-      "note": "AkShare公开指数日线；收益率由收盘价计算"
+      "status": "失败",
+      "date": null,
+      "note": "ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))"
     },
     {
       "module": "科创50",
-      "status": "成功",
-      "date": "2026-10-21",
-      "note": "AkShare公开指数日线；收益率由收盘价计算"
+      "status": "失败",
+      "date": null,
+      "note": "ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))"
     },
     {
       "module": "上证指数",
-      "status": "成功",
-      "date": "2026-10-21",
-      "note": "AkShare公开指数日线；收益率由收盘价计算"
+      "status": "失败",
+      "date": null,
+      "note": "ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))"
     },
     {
       "module": "深证成指",
-      "status": "成功",
-      "date": "2026-10-21",
-      "note": "AkShare公开指数日线；收益率由收盘价计算"
+      "status": "失败",
+      "date": null,
+      "note": "ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))"
     },
     {
       "module": "行业板块资金",
-      "status": "成功",
-      "date": "2026-10-21",
-      "note": "东方财富公开资金流向排名；资金流为供应商估算值"
+      "status": "失败",
+      "date": null,
+      "note": "JSONDecodeError: Expecting value: line 1 column 1 (char 0)"
     },
     {
       "module": "概念板块资金",
-      "status": "成功",
-      "date": "2026-10-21",
-      "note": "东方财富公开资金流向排名；资金流为供应商估算值"
+      "status": "失败",
+      "date": null,
+      "note": "JSONDecodeError: Expecting value: line 1 column 1 (char 0)"
     },
     {
       "module": "市场宽度",
@@ -435,6 +435,24 @@
       "status": "待接入",
       "date": null,
       "note": "历史分位/利差需稳定历史序列与口径核验后再接入"
+    },
+    {
+      "module": "历史数据保护",
+      "status": "已保留",
+      "date": "2026-10-21",
+      "note": "本次指数接口全部失败，沿用上次文件中的指数数据"
+    },
+    {
+      "module": "industry_flows",
+      "status": "已保留",
+      "date": "2026-10-21",
+      "note": "本次接口失败或返回空数据，沿用上次文件中的数据"
+    },
+    {
+      "module": "concept_flows",
+      "status": "已保留",
+      "date": "2026-10-21",
+      "note": "本次接口失败或返回空数据，沿用上次文件中的数据"
     }
   ]
 }
