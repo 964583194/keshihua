@@ -1,308 +1,316 @@
 {
   "meta": {
-    "generated_at": "2026-10-20 20:56:18 CST",
-    "data_date": "2026-10-20",
+    "generated_at": "2026-10-21 13:39:45 CST",
+    "data_date": "2026-10-21",
     "overall_status": "行情可用；部分指标待接入"
   },
   "overview": {
-    "hs300": null,
-    "chinext": 2717.48,
-    "star50": 1323.34,
+    "hs300": 4114.07,
+    "chinext": 2697.43,
+    "star50": 1345.13,
     "advancers": null,
     "decliners": null
   },
   "indices": [
     {
+      "name": "沪深300",
+      "latest": 4114.07,
+      "change_pct": -0.92,
+      "change_5d": -2.46,
+      "change_20d": -7.55,
+      "date": "2026-10-21"
+    },
+    {
       "name": "创业板指",
-      "latest": 2717.48,
-      "change_pct": -1.05,
-      "change_5d": -8.14,
-      "change_20d": -17.29,
-      "date": "2026-10-20"
+      "latest": 2697.43,
+      "change_pct": -1.52,
+      "change_5d": -5.91,
+      "change_20d": -16.95,
+      "date": "2026-10-21"
     },
     {
       "name": "科创50",
-      "latest": 1323.34,
-      "change_pct": -0.44,
-      "change_5d": -7.28,
-      "change_20d": -13.41,
-      "date": "2026-10-20"
+      "latest": 1345.13,
+      "change_pct": 0.2,
+      "change_5d": -2.55,
+      "change_20d": -13.33,
+      "date": "2026-10-21"
     },
     {
       "name": "上证指数",
-      "latest": 3708.02,
-      "change_pct": -0.61,
-      "change_5d": -2.44,
-      "change_20d": -4.56,
-      "date": "2026-10-20"
+      "latest": 3712.92,
+      "change_pct": -0.6,
+      "change_5d": -1.44,
+      "change_20d": -3.92,
+      "date": "2026-10-21"
     },
     {
       "name": "深证成指",
-      "latest": 11719.65,
-      "change_pct": -0.83,
-      "change_5d": -5.13,
-      "change_20d": -12.44,
-      "date": "2026-10-20"
+      "latest": 11714.8,
+      "change_pct": -0.73,
+      "change_5d": -3.27,
+      "change_20d": -11.84,
+      "date": "2026-10-21"
     }
   ],
   "industry_flows": [
     {
       "name": "电子",
-      "change_pct": 2.91,
-      "main_net_inflow": 41.68,
-      "inflow_ratio": null
-    },
-    {
-      "name": "机械设备",
-      "change_pct": 2.51,
-      "main_net_inflow": 22.23,
-      "inflow_ratio": null
-    },
-    {
-      "name": "消费电子",
-      "change_pct": 3.17,
-      "main_net_inflow": 19.49,
-      "inflow_ratio": null
-    },
-    {
-      "name": "消费电子零部件及组装",
-      "change_pct": 3.23,
-      "main_net_inflow": 18.26,
-      "inflow_ratio": null
-    },
-    {
-      "name": "印制电路板",
-      "change_pct": 2.37,
-      "main_net_inflow": 11.3,
-      "inflow_ratio": null
-    },
-    {
-      "name": "自动化设备",
-      "change_pct": 4.25,
-      "main_net_inflow": 10.91,
-      "inflow_ratio": null
-    },
-    {
-      "name": "元件",
-      "change_pct": 2.45,
-      "main_net_inflow": 10.42,
+      "change_pct": 0.21,
+      "main_net_inflow": 65.81,
       "inflow_ratio": null
     },
     {
       "name": "数字芯片设计",
-      "change_pct": 3.55,
-      "main_net_inflow": 6.89,
+      "change_pct": 0.9,
+      "main_net_inflow": 27.11,
       "inflow_ratio": null
     },
     {
-      "name": "汽车零部件",
-      "change_pct": 1.77,
-      "main_net_inflow": 5.92,
-      "inflow_ratio": null
-    },
-    {
-      "name": "通用设备",
-      "change_pct": 2.7,
-      "main_net_inflow": 5.57,
-      "inflow_ratio": null
-    },
-    {
-      "name": "机器人",
-      "change_pct": 4.56,
-      "main_net_inflow": 5.49,
-      "inflow_ratio": null
-    },
-    {
-      "name": "半导体材料",
-      "change_pct": 4.03,
-      "main_net_inflow": 5.44,
-      "inflow_ratio": null
-    },
-    {
-      "name": "光学光电子",
-      "change_pct": 2.27,
-      "main_net_inflow": 4.95,
-      "inflow_ratio": null
-    },
-    {
-      "name": "通信终端及配件",
-      "change_pct": 3.13,
-      "main_net_inflow": 4.65,
-      "inflow_ratio": null
-    },
-    {
-      "name": "光学元件",
-      "change_pct": 3.92,
-      "main_net_inflow": 4.59,
-      "inflow_ratio": null
-    },
-    {
-      "name": "半导体",
-      "change_pct": 3.22,
-      "main_net_inflow": 4.3,
+      "name": "元件",
+      "change_pct": -0.9,
+      "main_net_inflow": 20.67,
       "inflow_ratio": null
     },
     {
       "name": "通信",
-      "change_pct": 2.13,
-      "main_net_inflow": 4.04,
+      "change_pct": 1.03,
+      "main_net_inflow": 19.6,
+      "inflow_ratio": null
+    },
+    {
+      "name": "印制电路板",
+      "change_pct": -1.39,
+      "main_net_inflow": 19.3,
+      "inflow_ratio": null
+    },
+    {
+      "name": "半导体",
+      "change_pct": 0.11,
+      "main_net_inflow": 18.88,
       "inflow_ratio": null
     },
     {
       "name": "通信设备",
-      "change_pct": 2.51,
-      "main_net_inflow": 4.03,
+      "change_pct": 0.99,
+      "main_net_inflow": 17.87,
       "inflow_ratio": null
     },
     {
-      "name": "底盘与发动机系统",
-      "change_pct": 2.04,
-      "main_net_inflow": 3.93,
+      "name": "通信网络设备及器件",
+      "change_pct": 1.19,
+      "main_net_inflow": 15.36,
       "inflow_ratio": null
     },
     {
-      "name": "医疗服务",
-      "change_pct": 2.79,
-      "main_net_inflow": 3.71,
+      "name": "IT服务Ⅱ",
+      "change_pct": 2.2,
+      "main_net_inflow": 14.07,
+      "inflow_ratio": null
+    },
+    {
+      "name": "IT服务Ⅲ",
+      "change_pct": 2.2,
+      "main_net_inflow": 14.06,
+      "inflow_ratio": null
+    },
+    {
+      "name": "计算机",
+      "change_pct": 1.05,
+      "main_net_inflow": 12.59,
+      "inflow_ratio": null
+    },
+    {
+      "name": "机械设备",
+      "change_pct": -0.58,
+      "main_net_inflow": 12.1,
+      "inflow_ratio": null
+    },
+    {
+      "name": "农林牧渔",
+      "change_pct": 1.31,
+      "main_net_inflow": 11.66,
+      "inflow_ratio": null
+    },
+    {
+      "name": "光学光电子",
+      "change_pct": 0.83,
+      "main_net_inflow": 10.63,
+      "inflow_ratio": null
+    },
+    {
+      "name": "消费电子零部件及组装",
+      "change_pct": 0.05,
+      "main_net_inflow": 8.99,
+      "inflow_ratio": null
+    },
+    {
+      "name": "专用设备",
+      "change_pct": -0.78,
+      "main_net_inflow": 8.59,
+      "inflow_ratio": null
+    },
+    {
+      "name": "能源及重型设备",
+      "change_pct": -0.96,
+      "main_net_inflow": 8.52,
+      "inflow_ratio": null
+    },
+    {
+      "name": "消费电子",
+      "change_pct": 0.09,
+      "main_net_inflow": 7.88,
+      "inflow_ratio": null
+    },
+    {
+      "name": "林业Ⅲ",
+      "change_pct": 3.81,
+      "main_net_inflow": 6.47,
+      "inflow_ratio": null
+    },
+    {
+      "name": "林业Ⅱ",
+      "change_pct": 3.81,
+      "main_net_inflow": 6.47,
       "inflow_ratio": null
     }
   ],
   "concept_flows": [
     {
-      "name": "机器人概念",
-      "change_pct": 2.42,
-      "main_net_inflow": 46.09,
-      "inflow_ratio": null
-    },
-    {
-      "name": "人形机器人",
-      "change_pct": 3.29,
-      "main_net_inflow": 44.04,
-      "inflow_ratio": null
-    },
-    {
-      "name": "昨日高振幅",
-      "change_pct": 1.25,
-      "main_net_inflow": 37.37,
-      "inflow_ratio": null
-    },
-    {
       "name": "通信技术",
-      "change_pct": 2.34,
-      "main_net_inflow": 34.67,
+      "change_pct": 0.52,
+      "main_net_inflow": 57.59,
       "inflow_ratio": null
     },
     {
-      "name": "AI眼镜",
-      "change_pct": 3.44,
-      "main_net_inflow": 28.42,
+      "name": "科技风格",
+      "change_pct": 0.65,
+      "main_net_inflow": 51.58,
       "inflow_ratio": null
     },
     {
       "name": "5G概念",
-      "change_pct": 2.14,
-      "main_net_inflow": 28.06,
+      "change_pct": 0.56,
+      "main_net_inflow": 46.33,
       "inflow_ratio": null
     },
     {
-      "name": "智能穿戴",
-      "change_pct": 3.13,
-      "main_net_inflow": 27.79,
+      "name": "百元股",
+      "change_pct": 0.56,
+      "main_net_inflow": 46.11,
       "inflow_ratio": null
     },
     {
-      "name": "消费电子概念",
-      "change_pct": 3.0,
-      "main_net_inflow": 26.22,
-      "inflow_ratio": null
-    },
-    {
-      "name": "专精特新",
-      "change_pct": 2.62,
-      "main_net_inflow": 25.85,
-      "inflow_ratio": null
-    },
-    {
-      "name": "中盘成长",
-      "change_pct": 2.0,
-      "main_net_inflow": 25.52,
-      "inflow_ratio": null
-    },
-    {
-      "name": "小米概念",
-      "change_pct": 2.71,
-      "main_net_inflow": 25.08,
-      "inflow_ratio": null
-    },
-    {
-      "name": "QFII重仓",
-      "change_pct": 1.77,
-      "main_net_inflow": 25.03,
-      "inflow_ratio": null
-    },
-    {
-      "name": "苹果概念",
-      "change_pct": 3.3,
-      "main_net_inflow": 24.75,
-      "inflow_ratio": null
-    },
-    {
-      "name": "虚拟现实",
-      "change_pct": 2.1,
-      "main_net_inflow": 21.84,
+      "name": "半导体概念",
+      "change_pct": -0.03,
+      "main_net_inflow": 41.19,
       "inflow_ratio": null
     },
     {
       "name": "国产芯片",
-      "change_pct": 2.29,
-      "main_net_inflow": 19.33,
+      "change_pct": 0.38,
+      "main_net_inflow": 39.38,
       "inflow_ratio": null
     },
     {
-      "name": "物联网",
-      "change_pct": 2.07,
-      "main_net_inflow": 19.1,
+      "name": "小盘成长",
+      "change_pct": 0.34,
+      "main_net_inflow": 34.9,
       "inflow_ratio": null
     },
     {
-      "name": "华为概念",
-      "change_pct": 2.04,
-      "main_net_inflow": 17.65,
+      "name": "小盘股",
+      "change_pct": 0.02,
+      "main_net_inflow": 34.49,
       "inflow_ratio": null
     },
     {
-      "name": "无线耳机",
-      "change_pct": 3.82,
-      "main_net_inflow": 17.48,
+      "name": "CPO概念",
+      "change_pct": 1.05,
+      "main_net_inflow": 29.2,
       "inflow_ratio": null
     },
     {
-      "name": "中盘股",
-      "change_pct": 0.87,
-      "main_net_inflow": 17.12,
+      "name": "光纤概念",
+      "change_pct": 0.97,
+      "main_net_inflow": 29.07,
       "inflow_ratio": null
     },
     {
-      "name": "AIPC",
-      "change_pct": 3.3,
-      "main_net_inflow": 17.06,
+      "name": "QFII重仓",
+      "change_pct": -0.08,
+      "main_net_inflow": 28.93,
+      "inflow_ratio": null
+    },
+    {
+      "name": "算力概念",
+      "change_pct": 1.19,
+      "main_net_inflow": 28.58,
+      "inflow_ratio": null
+    },
+    {
+      "name": "高市净率",
+      "change_pct": 0.61,
+      "main_net_inflow": 27.24,
+      "inflow_ratio": null
+    },
+    {
+      "name": "光通信模块",
+      "change_pct": 0.79,
+      "main_net_inflow": 26.18,
+      "inflow_ratio": null
+    },
+    {
+      "name": "人工智能",
+      "change_pct": 0.6,
+      "main_net_inflow": 25.38,
+      "inflow_ratio": null
+    },
+    {
+      "name": "云计算",
+      "change_pct": 1.73,
+      "main_net_inflow": 24.98,
+      "inflow_ratio": null
+    },
+    {
+      "name": "存储芯片",
+      "change_pct": 0.05,
+      "main_net_inflow": 24.67,
+      "inflow_ratio": null
+    },
+    {
+      "name": "专精特新",
+      "change_pct": -0.61,
+      "main_net_inflow": 24.17,
+      "inflow_ratio": null
+    },
+    {
+      "name": "信创",
+      "change_pct": 1.22,
+      "main_net_inflow": 24.09,
+      "inflow_ratio": null
+    },
+    {
+      "name": "数据中心",
+      "change_pct": 0.46,
+      "main_net_inflow": 24.04,
       "inflow_ratio": null
     }
   ],
   "focus_sectors": [
     {
-      "name": "半导体材料",
-      "change_pct": 4.03,
+      "name": "半导体",
+      "change_pct": 0.11,
       "change_5d": null,
       "change_20d": null,
       "status": "当日资金排名数据"
     },
     {
-      "name": "CPO",
-      "change_pct": null,
+      "name": "CPO概念",
+      "change_pct": 1.05,
       "change_5d": null,
       "change_20d": null,
-      "status": "暂无可用匹配数据"
+      "status": "当日资金排名数据"
     },
     {
       "name": "光模块",
@@ -376,45 +384,45 @@
   "sources": [
     {
       "module": "沪深300",
-      "status": "失败",
-      "date": null,
-      "note": "ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))"
+      "status": "成功",
+      "date": "2026-10-21",
+      "note": "AkShare公开指数日线；收益率由收盘价计算"
     },
     {
       "module": "创业板指",
-      "status": "失败",
-      "date": null,
-      "note": "ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))"
+      "status": "成功",
+      "date": "2026-10-21",
+      "note": "AkShare公开指数日线；收益率由收盘价计算"
     },
     {
       "module": "科创50",
-      "status": "失败",
-      "date": null,
-      "note": "ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))"
+      "status": "成功",
+      "date": "2026-10-21",
+      "note": "AkShare公开指数日线；收益率由收盘价计算"
     },
     {
       "module": "上证指数",
-      "status": "失败",
-      "date": null,
-      "note": "ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))"
+      "status": "成功",
+      "date": "2026-10-21",
+      "note": "AkShare公开指数日线；收益率由收盘价计算"
     },
     {
       "module": "深证成指",
-      "status": "失败",
-      "date": null,
-      "note": "ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))"
+      "status": "成功",
+      "date": "2026-10-21",
+      "note": "AkShare公开指数日线；收益率由收盘价计算"
     },
     {
       "module": "行业板块资金",
-      "status": "失败",
-      "date": null,
-      "note": "JSONDecodeError: Expecting value: line 1 column 1 (char 0)"
+      "status": "成功",
+      "date": "2026-10-21",
+      "note": "东方财富公开资金流向排名；资金流为供应商估算值"
     },
     {
       "module": "概念板块资金",
-      "status": "失败",
-      "date": null,
-      "note": "JSONDecodeError: Expecting value: line 1 column 1 (char 0)"
+      "status": "成功",
+      "date": "2026-10-21",
+      "note": "东方财富公开资金流向排名；资金流为供应商估算值"
     },
     {
       "module": "市场宽度",
@@ -427,24 +435,6 @@
       "status": "待接入",
       "date": null,
       "note": "历史分位/利差需稳定历史序列与口径核验后再接入"
-    },
-    {
-      "module": "历史数据保护",
-      "status": "已保留",
-      "date": "2026-10-20",
-      "note": "本次指数接口全部失败，沿用上次文件中的指数数据"
-    },
-    {
-      "module": "industry_flows",
-      "status": "已保留",
-      "date": "2026-10-20",
-      "note": "本次接口失败或返回空数据，沿用上次文件中的数据"
-    },
-    {
-      "module": "concept_flows",
-      "status": "已保留",
-      "date": "2026-10-20",
-      "note": "本次接口失败或返回空数据，沿用上次文件中的数据"
     }
   ]
 }
