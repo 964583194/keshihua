@@ -1,56 +1,40 @@
 {
   "meta": {
-    "generated_at": "2026-10-21 21:10:03 CST",
-    "data_date": "2026-10-21",
+    "generated_at": "2026-10-22 13:40:57 CST",
+    "data_date": "2026-10-22",
     "overall_status": "行情可用；部分指标待接入"
   },
   "overview": {
-    "hs300": 4114.07,
-    "chinext": 2697.43,
-    "star50": 1345.13,
+    "hs300": null,
+    "chinext": null,
+    "star50": 1304.56,
     "advancers": null,
     "decliners": null
   },
   "indices": [
     {
-      "name": "沪深300",
-      "latest": 4114.07,
-      "change_pct": -0.92,
-      "change_5d": -2.46,
-      "change_20d": -7.55,
-      "date": "2026-10-21"
-    },
-    {
-      "name": "创业板指",
-      "latest": 2697.43,
-      "change_pct": -1.52,
-      "change_5d": -5.91,
-      "change_20d": -16.95,
-      "date": "2026-10-21"
-    },
-    {
       "name": "科创50",
-      "latest": 1345.13,
-      "change_pct": 0.2,
-      "change_5d": -2.55,
-      "change_20d": -13.33,
-      "date": "2026-10-21"
+      "latest": 1304.56,
+      "change_pct": -2.88,
+      "change_5d": -4.04,
+      "change_20d": -19.28,
+      "date": "2026-10-22"
     },
     {
       "name": "上证指数",
-      "latest": 3712.92,
-      "change_pct": -0.6,
-      "change_5d": -1.44,
-      "change_20d": -3.92,
-      "date": "2026-10-21"
+      "latest": 3651.43,
+      "change_pct": -1.66,
+      "change_5d": -1.51,
+      "change_20d": -6.17,
+      "date": "2026-10-22"
     },
     {
       "name": "深证成指",
-      "latest": 11714.8,
-      "change_pct": -0.73,
-      "change_5d": -3.27,
-      "change_20d": -11.84,
-      "date": "2026-10-21"
+      "latest": 11356.01,
+      "change_pct": -2.98,
+      "change_5d": -3.9,
+      "change_20d": -15.6,
+      "date": "2026-10-22"
     }
   ],
   "industry_flows": [
@@ -396,21 +380,21 @@
     },
     {
       "module": "科创50",
-      "status": "失败",
-      "date": null,
-      "note": "ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))"
+      "status": "成功",
+      "date": "2026-10-22",
+      "note": "AkShare公开指数日线；收益率由收盘价计算"
     },
     {
       "module": "上证指数",
-      "status": "失败",
-      "date": null,
-      "note": "ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))"
+      "status": "成功",
+      "date": "2026-10-22",
+      "note": "AkShare公开指数日线；收益率由收盘价计算"
     },
     {
       "module": "深证成指",
-      "status": "失败",
-      "date": null,
-      "note": "ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))"
+      "status": "成功",
+      "date": "2026-10-22",
+      "note": "AkShare公开指数日线；收益率由收盘价计算"
     },
     {
       "module": "行业板块资金",
@@ -435,12 +419,6 @@
       "status": "待接入",
       "date": null,
       "note": "历史分位/利差需稳定历史序列与口径核验后再接入"
-    },
-    {
-      "module": "历史数据保护",
-      "status": "已保留",
-      "date": "2026-10-21",
-      "note": "本次指数接口全部失败，沿用上次文件中的指数数据"
     },
     {
       "module": "industry_flows",
