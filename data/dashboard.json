@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated_at": "2026-10-26 13:42:53 CST",
+    "generated_at": "2026-10-26 20:06:58 CST",
     "data_date": "2026-10-26",
     "overall_status": "行情可用；部分指标待接入"
   },
@@ -376,9 +376,9 @@
     },
     {
       "module": "深证成指",
-      "status": "成功",
-      "date": "2026-10-26",
-      "note": "AkShare公开指数日线；收益率由收盘价计算"
+      "status": "失败",
+      "date": null,
+      "note": "ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))"
     },
     {
       "module": "行业板块资金",
@@ -405,15 +405,21 @@
       "note": "历史分位/利差需稳定历史序列与口径核验后再接入"
     },
     {
+      "module": "历史数据保护",
+      "status": "已保留",
+      "date": "2026-10-26",
+      "note": "本次指数接口全部失败，沿用上次文件中的指数数据"
+    },
+    {
       "module": "industry_flows",
       "status": "已保留",
-      "date": "2026-10-23",
+      "date": "2026-10-26",
       "note": "本次接口失败或返回空数据，沿用上次文件中的数据"
     },
     {
       "module": "concept_flows",
       "status": "已保留",
-      "date": "2026-10-23",
+      "date": "2026-10-26",
       "note": "本次接口失败或返回空数据，沿用上次文件中的数据"
     }
   ]
