@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated_at": "2026-10-27 19:27:46 CST",
+    "generated_at": "2026-10-27 21:31:17 CST",
     "data_date": "2026-10-27",
     "overall_status": "行情可用；部分指标待接入"
   },
@@ -360,15 +360,15 @@
   "sources": [
     {
       "module": "沪深300",
-      "status": "成功",
-      "date": "2026-10-27",
-      "note": "AkShare公开指数日线；收益率由收盘价计算"
+      "status": "失败",
+      "date": null,
+      "note": "ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))"
     },
     {
       "module": "创业板指",
-      "status": "成功",
-      "date": "2026-10-27",
-      "note": "AkShare公开指数日线；收益率由收盘价计算"
+      "status": "失败",
+      "date": null,
+      "note": "ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))"
     },
     {
       "module": "科创50",
@@ -411,6 +411,12 @@
       "status": "待接入",
       "date": null,
       "note": "历史分位/利差需稳定历史序列与口径核验后再接入"
+    },
+    {
+      "module": "历史数据保护",
+      "status": "已保留",
+      "date": "2026-10-27",
+      "note": "本次指数接口全部失败，沿用上次文件中的指数数据"
     },
     {
       "module": "industry_flows",
