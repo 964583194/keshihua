@@ -1,39 +1,31 @@
 {
   "meta": {
-    "generated_at": "2026-10-27 13:53:56 CST",
+    "generated_at": "2026-10-27 19:27:46 CST",
     "data_date": "2026-10-27",
     "overall_status": "行情可用；部分指标待接入"
   },
   "overview": {
-    "hs300": null,
-    "chinext": null,
-    "star50": 1282.55,
+    "hs300": 4049.55,
+    "chinext": 2548.15,
+    "star50": null,
     "advancers": null,
     "decliners": null
   },
   "indices": [
     {
-      "name": "科创50",
-      "latest": 1282.55,
-      "change_pct": -2.5,
-      "change_5d": -4.46,
-      "change_20d": -22.62,
+      "name": "沪深300",
+      "latest": 4049.55,
+      "change_pct": -1.32,
+      "change_5d": -2.47,
+      "change_20d": -10.79,
       "date": "2026-10-27"
     },
     {
-      "name": "上证指数",
-      "latest": 3683.77,
-      "change_pct": -0.37,
-      "change_5d": -1.38,
-      "change_20d": -6.74,
-      "date": "2026-10-27"
-    },
-    {
-      "name": "深证成指",
-      "latest": 11410.26,
-      "change_pct": -1.08,
-      "change_5d": -3.31,
-      "change_20d": -16.9,
+      "name": "创业板指",
+      "latest": 2548.15,
+      "change_pct": -3.41,
+      "change_5d": -6.97,
+      "change_20d": -25.05,
       "date": "2026-10-27"
     }
   ],
@@ -368,33 +360,33 @@
   "sources": [
     {
       "module": "沪深300",
-      "status": "失败",
-      "date": null,
-      "note": "ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))"
+      "status": "成功",
+      "date": "2026-10-27",
+      "note": "AkShare公开指数日线；收益率由收盘价计算"
     },
     {
       "module": "创业板指",
+      "status": "成功",
+      "date": "2026-10-27",
+      "note": "AkShare公开指数日线；收益率由收盘价计算"
+    },
+    {
+      "module": "科创50",
       "status": "失败",
       "date": null,
       "note": "ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))"
     },
     {
-      "module": "科创50",
-      "status": "成功",
-      "date": "2026-10-27",
-      "note": "AkShare公开指数日线；收益率由收盘价计算"
-    },
-    {
       "module": "上证指数",
-      "status": "成功",
-      "date": "2026-10-27",
-      "note": "AkShare公开指数日线；收益率由收盘价计算"
+      "status": "失败",
+      "date": null,
+      "note": "ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))"
     },
     {
       "module": "深证成指",
-      "status": "成功",
-      "date": "2026-10-27",
-      "note": "AkShare公开指数日线；收益率由收盘价计算"
+      "status": "失败",
+      "date": null,
+      "note": "ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))"
     },
     {
       "module": "行业板块资金",
@@ -423,13 +415,13 @@
     {
       "module": "industry_flows",
       "status": "已保留",
-      "date": "2026-10-26",
+      "date": "2026-10-27",
       "note": "本次接口失败或返回空数据，沿用上次文件中的数据"
     },
     {
       "module": "concept_flows",
       "status": "已保留",
-      "date": "2026-10-26",
+      "date": "2026-10-27",
       "note": "本次接口失败或返回空数据，沿用上次文件中的数据"
     }
   ]
