@@ -1,32 +1,48 @@
 {
   "meta": {
-    "generated_at": "2026-10-27 21:31:17 CST",
-    "data_date": "2026-10-27",
+    "generated_at": "2026-10-28 14:33:36 CST",
+    "data_date": "2026-10-28",
     "overall_status": "行情可用；部分指标待接入"
   },
   "overview": {
-    "hs300": 4049.55,
-    "chinext": 2548.15,
-    "star50": null,
+    "hs300": 4079.5,
+    "chinext": 2625.67,
+    "star50": 1279.32,
     "advancers": null,
     "decliners": null
   },
   "indices": [
     {
       "name": "沪深300",
-      "latest": 4049.55,
-      "change_pct": -1.32,
-      "change_5d": -2.47,
-      "change_20d": -10.79,
-      "date": "2026-10-27"
+      "latest": 4079.5,
+      "change_pct": 0.74,
+      "change_5d": -0.79,
+      "change_20d": -10.23,
+      "date": "2026-10-28"
     },
     {
       "name": "创业板指",
-      "latest": 2548.15,
-      "change_pct": -3.41,
-      "change_5d": -6.97,
-      "change_20d": -25.05,
-      "date": "2026-10-27"
+      "latest": 2625.67,
+      "change_pct": 3.04,
+      "change_5d": -2.56,
+      "change_20d": -22.77,
+      "date": "2026-10-28"
+    },
+    {
+      "name": "科创50",
+      "latest": 1279.32,
+      "change_pct": 2.16,
+      "change_5d": -4.76,
+      "change_20d": -23.17,
+      "date": "2026-10-28"
+    },
+    {
+      "name": "上证指数",
+      "latest": 3680.85,
+      "change_pct": 0.89,
+      "change_5d": -0.87,
+      "change_20d": -6.86,
+      "date": "2026-10-28"
     }
   ],
   "industry_flows": [
@@ -153,123 +169,123 @@
   ],
   "concept_flows": [
     {
-      "name": "次新股",
-      "change_pct": 1.93,
-      "main_net_inflow": 26.34,
+      "name": "融资融券",
+      "change_pct": 2.05,
+      "main_net_inflow": 163.47,
       "inflow_ratio": null
     },
     {
-      "name": "东方财富热股",
-      "change_pct": 0.84,
-      "main_net_inflow": 22.42,
+      "name": "基金重仓",
+      "change_pct": 2.74,
+      "main_net_inflow": 138.36,
       "inflow_ratio": null
     },
     {
-      "name": "抖音概念(字节概念)",
-      "change_pct": 0.36,
-      "main_net_inflow": 21.59,
+      "name": "科技风格",
+      "change_pct": 3.12,
+      "main_net_inflow": 136.71,
       "inflow_ratio": null
     },
     {
-      "name": "信创",
-      "change_pct": 0.93,
-      "main_net_inflow": 19.69,
+      "name": "MSCI中国",
+      "change_pct": 1.23,
+      "main_net_inflow": 123.71,
       "inflow_ratio": null
     },
     {
-      "name": "数字经济",
-      "change_pct": 0.47,
-      "main_net_inflow": 17.1,
+      "name": "深股通",
+      "change_pct": 2.1,
+      "main_net_inflow": 121.19,
       "inflow_ratio": null
     },
     {
-      "name": "消费电子概念",
-      "change_pct": 0.69,
-      "main_net_inflow": 16.96,
+      "name": "5G概念",
+      "change_pct": 2.99,
+      "main_net_inflow": 115.53,
       "inflow_ratio": null
     },
     {
-      "name": "国产软件",
-      "change_pct": 0.85,
-      "main_net_inflow": 16.71,
+      "name": "通信技术",
+      "change_pct": 3.05,
+      "main_net_inflow": 106.93,
       "inflow_ratio": null
     },
     {
-      "name": "人工智能",
-      "change_pct": 0.61,
-      "main_net_inflow": 16.1,
+      "name": "机器人概念",
+      "change_pct": 3.38,
+      "main_net_inflow": 106.81,
       "inflow_ratio": null
     },
     {
-      "name": "ChatGPT概念",
-      "change_pct": 2.12,
-      "main_net_inflow": 14.34,
+      "name": "富时罗素",
+      "change_pct": 1.02,
+      "main_net_inflow": 105.85,
       "inflow_ratio": null
     },
     {
-      "name": "AI应用",
-      "change_pct": 0.69,
-      "main_net_inflow": 13.41,
+      "name": "基金增仓",
+      "change_pct": 2.32,
+      "main_net_inflow": 104.6,
       "inflow_ratio": null
     },
     {
-      "name": "数据要素",
-      "change_pct": 0.41,
-      "main_net_inflow": 13.13,
+      "name": "百元股",
+      "change_pct": 4.08,
+      "main_net_inflow": 104.32,
       "inflow_ratio": null
     },
     {
-      "name": "2026三季报扭亏",
-      "change_pct": 1.25,
-      "main_net_inflow": 12.86,
+      "name": "大盘成长",
+      "change_pct": 2.16,
+      "main_net_inflow": 96.34,
       "inflow_ratio": null
     },
     {
-      "name": "鸿蒙概念",
-      "change_pct": 0.54,
-      "main_net_inflow": 11.95,
+      "name": "大盘股",
+      "change_pct": 0.89,
+      "main_net_inflow": 90.68,
       "inflow_ratio": null
     },
     {
-      "name": "虚拟机器人",
-      "change_pct": 3.06,
-      "main_net_inflow": 11.53,
+      "name": "国产芯片",
+      "change_pct": 3.25,
+      "main_net_inflow": 87.42,
       "inflow_ratio": null
     },
     {
-      "name": "茅指数",
+      "name": "2026中报预增",
       "change_pct": 1.95,
-      "main_net_inflow": 11.44,
+      "main_net_inflow": 81.43,
       "inflow_ratio": null
     },
     {
-      "name": "混合现实",
-      "change_pct": 1.92,
-      "main_net_inflow": 11.28,
+      "name": "标准普尔",
+      "change_pct": 0.81,
+      "main_net_inflow": 79.76,
       "inflow_ratio": null
     },
     {
-      "name": "昨日高换手",
-      "change_pct": -0.97,
-      "main_net_inflow": 11.26,
+      "name": "深成500",
+      "change_pct": 1.53,
+      "main_net_inflow": 79.02,
       "inflow_ratio": null
     },
     {
-      "name": "Web3.0",
-      "change_pct": 1.09,
-      "main_net_inflow": 11.17,
+      "name": "昨日高振幅",
+      "change_pct": 2.11,
+      "main_net_inflow": 78.66,
       "inflow_ratio": null
     },
     {
-      "name": "AIGC概念",
-      "change_pct": 0.55,
-      "main_net_inflow": 10.87,
+      "name": "CPO概念",
+      "change_pct": 3.55,
+      "main_net_inflow": 75.75,
       "inflow_ratio": null
     },
     {
-      "name": "互联网服务",
-      "change_pct": 0.57,
-      "main_net_inflow": 10.45,
+      "name": "人形机器人",
+      "change_pct": 4.87,
+      "main_net_inflow": 74.71,
       "inflow_ratio": null
     }
   ],
@@ -282,11 +298,11 @@
       "status": "当日资金排名数据"
     },
     {
-      "name": "CPO",
-      "change_pct": null,
+      "name": "CPO概念",
+      "change_pct": 3.55,
       "change_5d": null,
       "change_20d": null,
-      "status": "暂无可用匹配数据"
+      "status": "当日资金排名数据"
     },
     {
       "name": "光模块",
@@ -297,10 +313,10 @@
     },
     {
       "name": "AI应用",
-      "change_pct": 0.69,
+      "change_pct": null,
       "change_5d": null,
       "change_20d": null,
-      "status": "当日资金排名数据"
+      "status": "暂无可用匹配数据"
     },
     {
       "name": "电网设备",
@@ -360,27 +376,27 @@
   "sources": [
     {
       "module": "沪深300",
-      "status": "失败",
-      "date": null,
-      "note": "ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))"
+      "status": "成功",
+      "date": "2026-10-28",
+      "note": "AkShare公开指数日线；收益率由收盘价计算"
     },
     {
       "module": "创业板指",
-      "status": "失败",
-      "date": null,
-      "note": "ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))"
+      "status": "成功",
+      "date": "2026-10-28",
+      "note": "AkShare公开指数日线；收益率由收盘价计算"
     },
     {
       "module": "科创50",
-      "status": "失败",
-      "date": null,
-      "note": "ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))"
+      "status": "成功",
+      "date": "2026-10-28",
+      "note": "AkShare公开指数日线；收益率由收盘价计算"
     },
     {
       "module": "上证指数",
-      "status": "失败",
-      "date": null,
-      "note": "ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))"
+      "status": "成功",
+      "date": "2026-10-28",
+      "note": "AkShare公开指数日线；收益率由收盘价计算"
     },
     {
       "module": "深证成指",
@@ -396,9 +412,9 @@
     },
     {
       "module": "概念板块资金",
-      "status": "失败",
-      "date": null,
-      "note": "JSONDecodeError: Expecting value: line 1 column 1 (char 0)"
+      "status": "成功",
+      "date": "2026-10-28",
+      "note": "东方财富公开资金流向排名；资金流为供应商估算值"
     },
     {
       "module": "市场宽度",
@@ -413,19 +429,7 @@
       "note": "历史分位/利差需稳定历史序列与口径核验后再接入"
     },
     {
-      "module": "历史数据保护",
-      "status": "已保留",
-      "date": "2026-10-27",
-      "note": "本次指数接口全部失败，沿用上次文件中的指数数据"
-    },
-    {
       "module": "industry_flows",
-      "status": "已保留",
-      "date": "2026-10-27",
-      "note": "本次接口失败或返回空数据，沿用上次文件中的数据"
-    },
-    {
-      "module": "concept_flows",
       "status": "已保留",
       "date": "2026-10-27",
       "note": "本次接口失败或返回空数据，沿用上次文件中的数据"
