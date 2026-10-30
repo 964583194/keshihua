@@ -1,56 +1,48 @@
 {
   "meta": {
-    "generated_at": "2026-10-29 22:37:38 CST",
-    "data_date": "2026-10-29",
+    "generated_at": "2026-10-30 14:43:15 CST",
+    "data_date": "2026-10-30",
     "overall_status": "行情可用；部分指标待接入"
   },
   "overview": {
-    "hs300": 4040.69,
-    "chinext": 2528.35,
-    "star50": 1231.03,
+    "hs300": 3996.17,
+    "chinext": 2439.58,
+    "star50": 1175.08,
     "advancers": null,
     "decliners": null
   },
   "indices": [
     {
       "name": "沪深300",
-      "latest": 4040.69,
-      "change_pct": -1.06,
-      "change_5d": 0.11,
-      "change_20d": -10.55,
-      "date": "2026-10-29"
+      "latest": 3996.17,
+      "change_pct": -1.13,
+      "change_5d": -2.66,
+      "change_20d": -9.98,
+      "date": "2026-10-30"
     },
     {
       "name": "创业板指",
-      "latest": 2528.35,
-      "change_pct": -4.04,
-      "change_5d": -1.88,
-      "change_20d": -25.19,
-      "date": "2026-10-29"
+      "latest": 2439.58,
+      "change_pct": -3.1,
+      "change_5d": -9.11,
+      "change_20d": -25.82,
+      "date": "2026-10-30"
     },
     {
       "name": "科创50",
-      "latest": 1231.03,
-      "change_pct": -4.05,
-      "change_5d": -5.73,
-      "change_20d": -25.88,
-      "date": "2026-10-29"
+      "latest": 1175.08,
+      "change_pct": -4.32,
+      "change_5d": -12.67,
+      "change_20d": -27.55,
+      "date": "2026-10-30"
     },
     {
       "name": "上证指数",
-      "latest": 3652.86,
-      "change_pct": -0.78,
-      "change_5d": -0.14,
-      "change_20d": -7.21,
-      "date": "2026-10-29"
-    },
-    {
-      "name": "深证成指",
-      "latest": 11166.69,
-      "change_pct": -2.67,
-      "change_5d": -1.68,
-      "change_20d": -18.11,
-      "date": "2026-10-29"
+      "latest": 3608.34,
+      "change_pct": -1.18,
+      "change_5d": -2.23,
+      "change_20d": -7.2,
+      "date": "2026-10-30"
     }
   ],
   "industry_flows": [
@@ -384,33 +376,33 @@
   "sources": [
     {
       "module": "沪深300",
-      "status": "失败",
-      "date": null,
-      "note": "ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))"
+      "status": "成功",
+      "date": "2026-10-30",
+      "note": "AkShare公开指数日线；收益率由收盘价计算"
     },
     {
       "module": "创业板指",
-      "status": "失败",
-      "date": null,
-      "note": "ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))"
+      "status": "成功",
+      "date": "2026-10-30",
+      "note": "AkShare公开指数日线；收益率由收盘价计算"
     },
     {
       "module": "科创50",
-      "status": "失败",
-      "date": null,
-      "note": "ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))"
+      "status": "成功",
+      "date": "2026-10-30",
+      "note": "AkShare公开指数日线；收益率由收盘价计算"
     },
     {
       "module": "上证指数",
-      "status": "失败",
-      "date": null,
-      "note": "ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))"
+      "status": "成功",
+      "date": "2026-10-30",
+      "note": "AkShare公开指数日线；收益率由收盘价计算"
     },
     {
       "module": "深证成指",
       "status": "失败",
       "date": null,
-      "note": "ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))"
+      "note": "Push2RateLimitError: 东方财富 push2 行情服务器断开了连接，通常是短时间内请求过多，当前 IP 被临时限流。首次限流一般约 5 分钟后恢复，反复触发后可能需要 40 分钟以上；等待期间不要重复调用东方财富的行情接口，否则会延长限流。"
     },
     {
       "module": "行业板块资金",
@@ -435,12 +427,6 @@
       "status": "待接入",
       "date": null,
       "note": "历史分位/利差需稳定历史序列与口径核验后再接入"
-    },
-    {
-      "module": "历史数据保护",
-      "status": "已保留",
-      "date": "2026-10-29",
-      "note": "本次指数接口全部失败，沿用上次文件中的指数数据"
     },
     {
       "module": "industry_flows",
