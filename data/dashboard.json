@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated_at": "2026-11-03 15:29:09 CST",
+    "generated_at": "2026-11-03 23:27:21 CST",
     "data_date": "2026-11-03",
     "overall_status": "行情可用；部分指标待接入"
   },
@@ -85,13 +85,13 @@
       "inflow_ratio": null
     },
     {
-      "name": "保险Ⅱ",
+      "name": "保险Ⅲ",
       "change_pct": 2.66,
       "main_net_inflow": 7.6,
       "inflow_ratio": null
     },
     {
-      "name": "保险Ⅲ",
+      "name": "保险Ⅱ",
       "change_pct": 2.66,
       "main_net_inflow": 7.6,
       "inflow_ratio": null
