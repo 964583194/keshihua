@@ -1,306 +1,306 @@
 {
   "meta": {
-    "generated_at": "2026-11-04 23:42:52 CST",
-    "data_date": "2026-11-04",
+    "generated_at": "2026-11-05 15:38:57 CST",
+    "data_date": "2026-11-05",
     "overall_status": "行情可用；部分指标待接入"
   },
   "overview": {
-    "hs300": 4101.34,
-    "chinext": 2544.73,
-    "star50": 1265.47,
+    "hs300": 4113.41,
+    "chinext": 2566.8,
+    "star50": 1286.68,
     "advancers": null,
     "decliners": null
   },
   "indices": [
     {
       "name": "沪深300",
-      "latest": 4101.34,
-      "change_pct": 2.31,
-      "change_5d": 0.43,
-      "change_20d": -5.88,
-      "date": "2026-11-04"
+      "latest": 4113.41,
+      "change_pct": 0.29,
+      "change_5d": 1.77,
+      "change_20d": -4.57,
+      "date": "2026-11-05"
     },
     {
       "name": "创业板指",
-      "latest": 2544.73,
-      "change_pct": 6.4,
-      "change_5d": -3.42,
-      "change_20d": -18.84,
-      "date": "2026-11-04"
+      "latest": 2566.8,
+      "change_pct": 0.87,
+      "change_5d": 1.95,
+      "change_20d": -15.47,
+      "date": "2026-11-05"
     },
     {
       "name": "科创50",
-      "latest": 1265.47,
-      "change_pct": 9.92,
-      "change_5d": -1.36,
-      "change_20d": -17.29,
-      "date": "2026-11-04"
+      "latest": 1286.68,
+      "change_pct": 1.68,
+      "change_5d": 4.77,
+      "change_20d": -11.65,
+      "date": "2026-11-05"
     },
     {
       "name": "上证指数",
-      "latest": 3686.17,
-      "change_pct": 2.16,
-      "change_5d": 0.13,
-      "change_20d": -4.06,
-      "date": "2026-11-04"
+      "latest": 3689.91,
+      "change_pct": 0.1,
+      "change_5d": 1.05,
+      "change_20d": -3.2,
+      "date": "2026-11-05"
     },
     {
       "name": "深证成指",
-      "latest": 11335.69,
-      "change_pct": 4.22,
-      "change_5d": -1.2,
-      "change_20d": -12.04,
-      "date": "2026-11-04"
+      "latest": 11471.09,
+      "change_pct": 1.19,
+      "change_5d": 2.99,
+      "change_20d": -9.11,
+      "date": "2026-11-05"
     }
   ],
   "industry_flows": [
     {
-      "name": "电子",
-      "change_pct": 7.61,
-      "main_net_inflow": 312.63,
+      "name": "电力设备",
+      "change_pct": 3.79,
+      "main_net_inflow": 63.1,
       "inflow_ratio": null
     },
     {
       "name": "半导体",
-      "change_pct": 10.64,
-      "main_net_inflow": 195.89,
-      "inflow_ratio": null
-    },
-    {
-      "name": "数字芯片设计",
-      "change_pct": 10.29,
-      "main_net_inflow": 82.47,
-      "inflow_ratio": null
-    },
-    {
-      "name": "通信设备",
-      "change_pct": 5.72,
-      "main_net_inflow": 76.94,
-      "inflow_ratio": null
-    },
-    {
-      "name": "通信",
-      "change_pct": 4.63,
-      "main_net_inflow": 75.86,
-      "inflow_ratio": null
-    },
-    {
-      "name": "有色金属",
-      "change_pct": 4.67,
-      "main_net_inflow": 73.45,
-      "inflow_ratio": null
-    },
-    {
-      "name": "通信网络设备及器件",
-      "change_pct": 7.25,
-      "main_net_inflow": 57.38,
-      "inflow_ratio": null
-    },
-    {
-      "name": "元件",
-      "change_pct": 7.26,
-      "main_net_inflow": 49.86,
-      "inflow_ratio": null
-    },
-    {
-      "name": "电力设备",
-      "change_pct": 3.69,
-      "main_net_inflow": 45.56,
-      "inflow_ratio": null
-    },
-    {
-      "name": "机械设备",
-      "change_pct": 3.85,
-      "main_net_inflow": 44.86,
-      "inflow_ratio": null
-    },
-    {
-      "name": "印制电路板",
-      "change_pct": 7.38,
-      "main_net_inflow": 43.95,
+      "change_pct": 2.78,
+      "main_net_inflow": 61.04,
       "inflow_ratio": null
     },
     {
       "name": "半导体设备",
-      "change_pct": 15.22,
-      "main_net_inflow": 42.47,
+      "change_pct": 4.33,
+      "main_net_inflow": 54.32,
       "inflow_ratio": null
     },
     {
-      "name": "消费电子零部件及组装",
-      "change_pct": 5.07,
-      "main_net_inflow": 34.66,
+      "name": "传媒",
+      "change_pct": 3.86,
+      "main_net_inflow": 34.92,
       "inflow_ratio": null
     },
     {
-      "name": "消费电子",
-      "change_pct": 4.96,
-      "main_net_inflow": 34.36,
+      "name": "光伏设备",
+      "change_pct": 8.45,
+      "main_net_inflow": 32.36,
       "inflow_ratio": null
     },
     {
-      "name": "小金属",
-      "change_pct": 4.69,
-      "main_net_inflow": 28.82,
-      "inflow_ratio": null
-    },
-    {
-      "name": "集成电路封测",
-      "change_pct": 9.3,
-      "main_net_inflow": 24.81,
-      "inflow_ratio": null
-    },
-    {
-      "name": "贵金属",
-      "change_pct": 10.45,
-      "main_net_inflow": 23.49,
-      "inflow_ratio": null
-    },
-    {
-      "name": "通用设备",
-      "change_pct": 4.18,
-      "main_net_inflow": 23.26,
-      "inflow_ratio": null
-    },
-    {
-      "name": "计算机",
-      "change_pct": 2.83,
-      "main_net_inflow": 22.32,
+      "name": "电池",
+      "change_pct": 3.86,
+      "main_net_inflow": 26.43,
       "inflow_ratio": null
     },
     {
       "name": "半导体材料",
-      "change_pct": 11.89,
-      "main_net_inflow": 22.05,
+      "change_pct": 3.28,
+      "main_net_inflow": 21.09,
+      "inflow_ratio": null
+    },
+    {
+      "name": "营销代理",
+      "change_pct": 5.93,
+      "main_net_inflow": 20.52,
+      "inflow_ratio": null
+    },
+    {
+      "name": "广告营销",
+      "change_pct": 5.65,
+      "main_net_inflow": 20.07,
+      "inflow_ratio": null
+    },
+    {
+      "name": "有色金属",
+      "change_pct": 2.58,
+      "main_net_inflow": 18.62,
+      "inflow_ratio": null
+    },
+    {
+      "name": "机械设备",
+      "change_pct": 2.06,
+      "main_net_inflow": 18.35,
+      "inflow_ratio": null
+    },
+    {
+      "name": "IT服务Ⅱ",
+      "change_pct": 3.61,
+      "main_net_inflow": 16.76,
+      "inflow_ratio": null
+    },
+    {
+      "name": "IT服务Ⅲ",
+      "change_pct": 3.61,
+      "main_net_inflow": 16.76,
+      "inflow_ratio": null
+    },
+    {
+      "name": "锂电池",
+      "change_pct": 4.14,
+      "main_net_inflow": 15.44,
+      "inflow_ratio": null
+    },
+    {
+      "name": "计算机",
+      "change_pct": 3.16,
+      "main_net_inflow": 13.99,
+      "inflow_ratio": null
+    },
+    {
+      "name": "电子",
+      "change_pct": 2.45,
+      "main_net_inflow": 12.05,
+      "inflow_ratio": null
+    },
+    {
+      "name": "能源金属",
+      "change_pct": 4.8,
+      "main_net_inflow": 11.88,
+      "inflow_ratio": null
+    },
+    {
+      "name": "通用设备",
+      "change_pct": 1.99,
+      "main_net_inflow": 11.27,
+      "inflow_ratio": null
+    },
+    {
+      "name": "汽车",
+      "change_pct": 2.23,
+      "main_net_inflow": 11.17,
+      "inflow_ratio": null
+    },
+    {
+      "name": "消费电子",
+      "change_pct": 3.46,
+      "main_net_inflow": 10.75,
       "inflow_ratio": null
     }
   ],
   "concept_flows": [
     {
+      "name": "专精特新",
+      "change_pct": 2.68,
+      "main_net_inflow": 80.47,
+      "inflow_ratio": null
+    },
+    {
       "name": "融资融券",
-      "change_pct": 3.36,
-      "main_net_inflow": 473.57,
+      "change_pct": 2.25,
+      "main_net_inflow": 73.5,
       "inflow_ratio": null
     },
     {
-      "name": "MSCI中国",
-      "change_pct": 3.82,
-      "main_net_inflow": 348.7,
+      "name": "小盘股",
+      "change_pct": 2.18,
+      "main_net_inflow": 70.1,
       "inflow_ratio": null
     },
     {
-      "name": "基金减仓",
-      "change_pct": 4.01,
-      "main_net_inflow": 329.68,
+      "name": "中证500",
+      "change_pct": 1.66,
+      "main_net_inflow": 65.83,
       "inflow_ratio": null
     },
     {
-      "name": "深股通",
-      "change_pct": 3.31,
-      "main_net_inflow": 296.4,
+      "name": "沪股通",
+      "change_pct": 2.0,
+      "main_net_inflow": 65.37,
       "inflow_ratio": null
     },
     {
       "name": "半导体概念",
-      "change_pct": 7.47,
-      "main_net_inflow": 278.61,
+      "change_pct": 2.56,
+      "main_net_inflow": 64.93,
       "inflow_ratio": null
     },
     {
-      "name": "2026中报预增",
-      "change_pct": 4.3,
-      "main_net_inflow": 277.27,
+      "name": "中盘股",
+      "change_pct": 1.85,
+      "main_net_inflow": 60.72,
       "inflow_ratio": null
     },
     {
-      "name": "科技风格",
-      "change_pct": 8.99,
-      "main_net_inflow": 273.0,
+      "name": "中芯概念",
+      "change_pct": 2.89,
+      "main_net_inflow": 57.88,
       "inflow_ratio": null
     },
     {
-      "name": "大盘股",
-      "change_pct": 3.49,
-      "main_net_inflow": 269.32,
+      "name": "先进封装",
+      "change_pct": 2.71,
+      "main_net_inflow": 56.91,
       "inflow_ratio": null
     },
     {
-      "name": "富时罗素",
-      "change_pct": 2.1,
-      "main_net_inflow": 249.52,
+      "name": "破增发价股",
+      "change_pct": 2.26,
+      "main_net_inflow": 52.94,
       "inflow_ratio": null
     },
     {
-      "name": "大盘成长",
-      "change_pct": 6.73,
-      "main_net_inflow": 237.0,
+      "name": "深股通",
+      "change_pct": 2.3,
+      "main_net_inflow": 48.52,
       "inflow_ratio": null
     },
     {
-      "name": "国产芯片",
-      "change_pct": 6.25,
-      "main_net_inflow": 232.45,
+      "name": "昨日首板",
+      "change_pct": 4.94,
+      "main_net_inflow": 48.45,
       "inflow_ratio": null
     },
     {
-      "name": "通信技术",
-      "change_pct": 5.44,
-      "main_net_inflow": 219.19,
+      "name": "电池技术",
+      "change_pct": 2.64,
+      "main_net_inflow": 47.14,
       "inflow_ratio": null
     },
     {
-      "name": "深成500",
+      "name": "最近多板",
       "change_pct": 3.69,
-      "main_net_inflow": 206.22,
+      "main_net_inflow": 45.95,
       "inflow_ratio": null
     },
     {
-      "name": "基金重仓",
-      "change_pct": 8.71,
-      "main_net_inflow": 195.89,
+      "name": "百度概念",
+      "change_pct": 3.31,
+      "main_net_inflow": 45.2,
       "inflow_ratio": null
     },
     {
-      "name": "百元股",
-      "change_pct": 9.85,
-      "main_net_inflow": 186.43,
+      "name": "昨日涨停",
+      "change_pct": 4.69,
+      "main_net_inflow": 45.06,
       "inflow_ratio": null
     },
     {
-      "name": "存储芯片",
-      "change_pct": 9.51,
-      "main_net_inflow": 180.45,
+      "name": "储能概念",
+      "change_pct": 2.76,
+      "main_net_inflow": 44.61,
       "inflow_ratio": null
     },
     {
-      "name": "创业板综",
-      "change_pct": 3.75,
-      "main_net_inflow": 176.87,
+      "name": "AI智能体",
+      "change_pct": 3.76,
+      "main_net_inflow": 44.34,
       "inflow_ratio": null
     },
     {
-      "name": "5G概念",
-      "change_pct": 5.15,
-      "main_net_inflow": 176.1,
+      "name": "虚拟现实",
+      "change_pct": 3.0,
+      "main_net_inflow": 43.25,
       "inflow_ratio": null
     },
     {
-      "name": "HS300_",
-      "change_pct": 2.19,
-      "main_net_inflow": 175.75,
-      "inflow_ratio": null
-    },
-    {
-      "name": "华为概念",
-      "change_pct": 4.13,
-      "main_net_inflow": 174.61,
+      "name": "昨日涨停_含一字",
+      "change_pct": 4.48,
+      "main_net_inflow": 41.59,
       "inflow_ratio": null
     }
   ],
   "focus_sectors": [
     {
       "name": "半导体",
-      "change_pct": 10.64,
+      "change_pct": 2.78,
       "change_5d": null,
       "change_20d": null,
       "status": "当日资金排名数据"
@@ -342,7 +342,7 @@
     },
     {
       "name": "有色金属",
-      "change_pct": 4.67,
+      "change_pct": 2.58,
       "change_5d": null,
       "change_20d": null,
       "status": "当日资金排名数据"
@@ -355,18 +355,18 @@
       "status": "暂无可用匹配数据"
     },
     {
-      "name": "储能",
-      "change_pct": null,
+      "name": "储能概念",
+      "change_pct": 2.76,
       "change_5d": null,
       "change_20d": null,
-      "status": "暂无可用匹配数据"
+      "status": "当日资金排名数据"
     },
     {
       "name": "电池",
-      "change_pct": null,
+      "change_pct": 3.86,
       "change_5d": null,
       "change_20d": null,
-      "status": "暂无可用匹配数据"
+      "status": "当日资金排名数据"
     }
   ],
   "breadth": {
@@ -384,44 +384,44 @@
   "sources": [
     {
       "module": "沪深300",
-      "status": "失败",
-      "date": null,
-      "note": "Push2RateLimitError: 东方财富 push2 行情服务器断开了连接，通常是短时间内请求过多，当前 IP 被临时限流。首次限流一般约 5 分钟后恢复，反复触发后可能需要 40 分钟以上；等待期间不要重复调用东方财富的行情接口，否则会延长限流。"
+      "status": "成功",
+      "date": "2026-11-05",
+      "note": "AkShare公开指数日线；收益率由收盘价计算"
     },
     {
       "module": "创业板指",
-      "status": "失败",
-      "date": null,
-      "note": "Push2RateLimitError: 东方财富 push2 行情服务器断开了连接，通常是短时间内请求过多，当前 IP 被临时限流。首次限流一般约 5 分钟后恢复，反复触发后可能需要 40 分钟以上；等待期间不要重复调用东方财富的行情接口，否则会延长限流。"
+      "status": "成功",
+      "date": "2026-11-05",
+      "note": "AkShare公开指数日线；收益率由收盘价计算"
     },
     {
       "module": "科创50",
-      "status": "失败",
-      "date": null,
-      "note": "Push2RateLimitError: 东方财富 push2 行情服务器断开了连接，通常是短时间内请求过多，当前 IP 被临时限流。首次限流一般约 5 分钟后恢复，反复触发后可能需要 40 分钟以上；等待期间不要重复调用东方财富的行情接口，否则会延长限流。"
+      "status": "成功",
+      "date": "2026-11-05",
+      "note": "AkShare公开指数日线；收益率由收盘价计算"
     },
     {
       "module": "上证指数",
-      "status": "失败",
-      "date": null,
-      "note": "Push2RateLimitError: 东方财富 push2 行情服务器断开了连接，通常是短时间内请求过多，当前 IP 被临时限流。首次限流一般约 5 分钟后恢复，反复触发后可能需要 40 分钟以上；等待期间不要重复调用东方财富的行情接口，否则会延长限流。"
+      "status": "成功",
+      "date": "2026-11-05",
+      "note": "AkShare公开指数日线；收益率由收盘价计算"
     },
     {
       "module": "深证成指",
-      "status": "失败",
-      "date": null,
-      "note": "Push2RateLimitError: 东方财富 push2 行情服务器断开了连接，通常是短时间内请求过多，当前 IP 被临时限流。首次限流一般约 5 分钟后恢复，反复触发后可能需要 40 分钟以上；等待期间不要重复调用东方财富的行情接口，否则会延长限流。"
+      "status": "成功",
+      "date": "2026-11-05",
+      "note": "AkShare公开指数日线；收益率由收盘价计算"
     },
     {
       "module": "行业板块资金",
       "status": "成功",
-      "date": null,
+      "date": "2026-11-05",
       "note": "东方财富公开资金流向排名；资金流为供应商估算值"
     },
     {
       "module": "概念板块资金",
       "status": "成功",
-      "date": null,
+      "date": "2026-11-05",
       "note": "东方财富公开资金流向排名；资金流为供应商估算值"
     },
     {
@@ -435,12 +435,6 @@
       "status": "待接入",
       "date": null,
       "note": "历史分位/利差需稳定历史序列与口径核验后再接入"
-    },
-    {
-      "module": "历史数据保护",
-      "status": "已保留",
-      "date": "2026-11-04",
-      "note": "本次指数接口全部失败，沿用上次文件中的指数数据"
     }
   ]
 }
