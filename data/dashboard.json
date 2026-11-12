@@ -1,56 +1,24 @@
 {
   "meta": {
-    "generated_at": "2026-11-12 15:54:54 CST",
-    "data_date": "2026-11-11",
+    "generated_at": "2026-11-13 00:10:47 CST",
+    "data_date": "2026-11-12",
     "overall_status": "行情可用；部分指标待接入"
   },
   "overview": {
-    "hs300": 4075.71,
-    "chinext": 2572.07,
-    "star50": 1300.38,
+    "hs300": 4043.93,
+    "chinext": null,
+    "star50": null,
     "advancers": null,
     "decliners": null
   },
   "indices": [
     {
       "name": "沪深300",
-      "latest": 4075.71,
-      "change_pct": 0.41,
-      "change_5d": -0.62,
-      "change_20d": -3.37,
-      "date": "2026-11-11"
-    },
-    {
-      "name": "创业板指",
-      "latest": 2572.07,
-      "change_pct": 3.11,
-      "change_5d": 1.07,
-      "change_20d": -10.28,
-      "date": "2026-11-11"
-    },
-    {
-      "name": "科创50",
-      "latest": 1300.38,
-      "change_pct": 2.8,
-      "change_5d": 2.76,
-      "change_20d": -5.79,
-      "date": "2026-11-11"
-    },
-    {
-      "name": "上证指数",
-      "latest": 3680.64,
-      "change_pct": 0.46,
-      "change_5d": -0.15,
-      "change_20d": -2.3,
-      "date": "2026-11-11"
-    },
-    {
-      "name": "深证成指",
-      "latest": 11389.74,
-      "change_pct": 1.32,
-      "change_5d": 0.48,
-      "change_20d": -5.95,
-      "date": "2026-11-11"
+      "latest": 4043.93,
+      "change_pct": -0.78,
+      "change_5d": -1.69,
+      "change_20d": -2.93,
+      "date": "2026-11-12"
     }
   ],
   "industry_flows": [
@@ -384,9 +352,9 @@
   "sources": [
     {
       "module": "沪深300",
-      "status": "失败",
-      "date": null,
-      "note": "Push2RateLimitError: 东方财富 push2 行情服务器断开了连接，通常是短时间内请求过多，当前 IP 被临时限流。首次限流一般约 5 分钟后恢复，反复触发后可能需要 40 分钟以上；等待期间不要重复调用东方财富的行情接口，否则会延长限流。"
+      "status": "成功",
+      "date": "2026-11-12",
+      "note": "AkShare公开指数日线；收益率由收盘价计算"
     },
     {
       "module": "创业板指",
@@ -435,12 +403,6 @@
       "status": "待接入",
       "date": null,
       "note": "历史分位/利差需稳定历史序列与口径核验后再接入"
-    },
-    {
-      "module": "历史数据保护",
-      "status": "已保留",
-      "date": "2026-11-11",
-      "note": "本次指数接口全部失败，沿用上次文件中的指数数据"
     },
     {
       "module": "industry_flows",
